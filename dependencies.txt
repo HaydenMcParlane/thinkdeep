@@ -1,0 +1,18 @@
+#######################################################################
+#   This file outlines dependencies that need to be installed before
+#   this application can be run.
+#######################################################################
+
+Note: If you're using Ubuntu 16.04 as a server OS the shift to systemd
+for system boot requires additional steps.
+
+MongoDB v2.6.10:
+    For ubuntu 16.04:
+        See https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04.
+
+OS Package Dependencies:
+    nodejs.
+    npm.
+
+NPM dependencies:
+    mongoose

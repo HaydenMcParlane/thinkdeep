@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="thinkdeep" ng-controller="LandingController">
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <ul>
+        <li ng-repeat="product in products" >
+            {{ product.name }}
+        </li>
+    </ul>
+</body>
+</html>
