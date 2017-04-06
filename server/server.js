@@ -3,26 +3,17 @@
  */
 /*jslint node: true*/
 "use strict";
-var express = require("express");
-var app = express();
 var cors = require("cors");
-app.use(cors());
+var db = require("./db");
+var express = require("express");
+var bodyParser = require("body-parser");
+var router = require("./route");
 
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/thinkdeep");
+var app = express();
 
-// var Product = mongoose.model("Product", {name: String});
-// app.get("/", function (req, res){
-//     Product.find(function (err, products) {
-//         res.send(products);
-//     });
-// });
+app.use(bodyParser());
+app.use("/", router);
 
-var CaseStudy = mongoose.model("CaseStudy", {name: String});
-app.get("/case-studies", function(req, res){
-    CaseStudy.find(function (err, caseStudies) {
-        res.send(caseStudies);
-    });
-});
+db.connect("mongodb://localhost/thinkdeep");
 
 app.listen(3000);
