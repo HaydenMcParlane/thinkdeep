@@ -11,7 +11,7 @@
 
     function LandingController($scope, $http) {
         var app = $scope;
-        $http.get("http://localhost:3000").then(function(products){
+        $http.get("http://localhost:3000/thinkdeep").then(function(products){
             app.products = products.data;
         }, function (error) {
             console.log(error);
