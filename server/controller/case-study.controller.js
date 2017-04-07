@@ -14,8 +14,9 @@ exports.create = function (req, res) {
 };
 
 exports.read = function(req, res){
-    return CaseStudy.find(function (err, caseStudies) {
-        // TODO: Handle error condition
-        return caseStudies;
+    CaseStudy.find(function (err, caseStudies) {
+        if (err)
+            res.send(err);
+        res.send(caseStudies);
     });
 }

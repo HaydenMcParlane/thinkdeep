@@ -11,10 +11,11 @@
 
     function LandingController($scope, $http) {
         var app = $scope;
-        $http.get("http://localhost:3000/thinkdeep").then(function(products){
-            app.products = products.data;
-        }, function (error) {
-            console.log(error);
-        });
+        $http.get("http://localhost:3000/api/case-studies")
+            .then(function(err, caseStudies){
+                app.caseStudies = caseStudies.data;
+            }, function (error) {
+                console.log(error);
+            });
     }
 }());

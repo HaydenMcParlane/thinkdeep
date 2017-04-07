@@ -3,20 +3,24 @@
  */
 var caseStudyController = require("./controller/case-study.controller");
 var express = require("express");
+var path = require("path");
 
 var router = express.Router();
 
+// Pages
 router.get("/", function(req, res){
-   res.render(express.static("../public/index.html"), {title: "ThinkDeep"});
+   res.sendFile(path.resolve("../public/index.html"));
 });
 
-router.post("/case-studies", function(req, res) {
-    return caseStudyController.create(req, res);
-    //res.redirect("/");
+
+// API end points
+router.post("/api/case-studies", function(req, res) {
+    caseStudyController.create(req, res);
+    res.status(200).end();
 });
 
-router.get("/case-studies", function(req, res){
-    return caseStudyController.read(req, res);
+router.get("/api/case-studies", function(req, res){
+    caseStudyController.read(req, res);
 });
 
 module.exports = router;
