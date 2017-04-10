@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script type="text/javascript" src="/angular/angular.js"></script>
+    <!--<script type="text/javascript">-->
+            <!-- window.angular || document.write('<script type="text/javascript" src="/angular/angular.js"><\/script>');-->
+    <!--</script>-->
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="landing-controller.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="service/case-study.service.js"></script>
+
 </head>
 <body ng-app="thinkdeep" ng-controller="LandingController">
-    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="landing-controller.js"></script>
     <ul>
         <li ng-repeat="caseStudy in caseStudies" >
             {{ caseStudy.name }}

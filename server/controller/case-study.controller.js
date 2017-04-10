@@ -16,7 +16,9 @@ exports.create = function (req, res) {
 exports.read = function(req, res){
     CaseStudy.find(function (err, caseStudies) {
         if (err)
-            res.send(err);
-        res.send(caseStudies);
+            res.status(500).send(err);
+        else{
+            res.status(200).send(caseStudies);
+        }
     });
 }

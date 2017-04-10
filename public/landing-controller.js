@@ -7,15 +7,13 @@
     var landing = angular.module("thinkdeep", [])
         .controller("LandingController", LandingController);
 
-    LandingController.$inject = ["$scope", "$http"];
+    LandingController.$inject = ["$scope", "CaseStudyService"];
 
-    function LandingController($scope, $http) {
+    function LandingController($scope, CaseStudyService) {
         var app = $scope;
-        $http.get("http://localhost:3000/api/case-studies")
-            .then(function(err, caseStudies){
-                app.caseStudies = caseStudies.data;
-            }, function (error) {
-                console.log(error);
-            });
+
+        CaseStudyService.getMany().then(function (caseStudies) {
+            app.caseStudies = caseStudies;
+        });
     }
 }());
