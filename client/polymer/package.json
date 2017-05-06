@@ -1,0 +1,15 @@
+{
+  "name": "thinkdeep.polymer",
+  "version": "1.0.0",
+  "description": "Polymer implementation of thinkdeep.tech.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hayden.mcparlane@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "polymer-cli": "^0.18.1"
+  }
+}

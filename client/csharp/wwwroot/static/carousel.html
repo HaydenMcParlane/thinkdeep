@@ -1,0 +1,21 @@
+
+<div id="concept-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-ng-class="{active: $first}" data-target="#concept-carousel" data-ng-repeat="carouselConcept in vm.carouselConcepts" data-slide-to="{{carouselConcept.slideTo}}"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div ng-class="{item:true, active: $first}" data-ng-repeat="carouselConcept in vm.carouselConcepts">
+            <img src="{{carouselConcept.image.source}}" alt="{{carouselConcept.image.description}}" />
+        </div>
+    
+        <a class="left carousel-control" href="#concept-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#concept-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only"></span>
+        </a>
+    </div>
+</div>
