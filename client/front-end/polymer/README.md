@@ -16,5 +16,16 @@ Careers, etc).
                            .
     </iron-footer>
 
++ Implement nesting within elements for further customization. I.e,
+    <my-element>
+        <my-element-child-typeA>
+        <my-element-child-typeB>
+        <my-element-child-typeA>
+            .
+            .
+            .
+            .
+    </my-element>
+
 
 + Use top down approach to developing website along with TDD.

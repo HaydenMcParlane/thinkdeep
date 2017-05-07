@@ -1,24 +1,14 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../iron-footer-a/iron-footer-a.html">
 <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../bower_components/bootswatch/journal/bootstrap.css">
 
 <dom-module id="iron-footer">
     <template>
         <div id="footer">                
-            <!-- TODO: 
-                implement nesting so that footer element can have encapsulate footer
-                specifics (i.e, 
-                    <iron-footer copyright="Hayden McParlane">
-                        <iron-footer-a href="Contact Us">Contact Us</iron-footer-a>
-                           .
-                           .
-                           .
-                    </iron-footer>
-                )
-            -->
             <div class="container-fluid">
                 <nav class="nav navbar-default navbar-fixed-bottom">
-                    <h5 class="text-center text-default">&copy; 2017 Hayden McParlane</h5>
+                    <h5 class="text-center text-default">&copy; {{copywriteDate}} {{copywrite}}</h5>                    
                 </nav>
             </div>
         </div>
@@ -28,8 +18,31 @@
 
     <script>
         class IronFooter extends Polymer.Element{
+            constructor(){
+                super();
+            }
+
             static get is(){ return "iron-footer"; }
-            static get properties(){ return {}; }
+            static get properties(){ 
+                return { 
+                    copywrite: {
+                        type: String
+                    },
+                    copywriteDate:{
+                        type: String,
+                        value: new Date().getFullYear().toString()
+                    },
+                    ironFooterChildren: {
+                        type: Function,
+                        value: function(){
+                            let ironFooterA = this.querySelectorAll('iron-footer-a');                            
+                            console.log(ironFooterA);
+                            ironFooterA.name = "Testing";           
+                        }
+                    }
+                }; 
+            }
+
         }
 
         window.customElements.define(IronFooter.is, IronFooter);

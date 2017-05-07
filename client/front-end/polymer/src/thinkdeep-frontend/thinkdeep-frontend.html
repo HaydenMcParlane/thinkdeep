@@ -7,13 +7,14 @@
 <dom-module id="thinkdeep-frontend">
   <template>
 
-    <iron-footer></iron-footer>
+    <iron-footer thing="thingval"></iron-footer>
 
   </template>
 
   <script>
     
-    class ThinkdeepFrontend extends Polymer.Element {
+    class ThinkdeepFrontend extends Polymer.Element {      
+
       static get is() { return 'thinkdeep-frontend'; }
       static get properties() {
         return {
