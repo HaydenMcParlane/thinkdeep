@@ -1,0 +1,31 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../iron-footer/iron-footer.html">
+
+<dom-module id="thinkdeep-footer">
+    <template>
+            <!-- TODO: 
+                implement nesting so that footer element can have encapsulate footer
+                specifics (i.e, 
+                    <iron-footer copyright="Hayden McParlane">
+                        <iron-footer-a href="Contact Us">Contact Us</iron-footer-a>
+                           .
+                           .
+                           .
+                    </iron-footer>
+                )
+            -->
+
+        <iron-footer></iron-footer>
+    </template>
+
+    <script>
+        class ThinkDeepFooter extends Polymer.Element {
+            static get is(){ return "thinkdeep-footer"; }
+            static get properties(){
+                return {};
+            }
+        }
+        window.customElements.define(ThinkDeepFooter.is, ThinkDeepFooter);
+    </script>
+</dom-module>
