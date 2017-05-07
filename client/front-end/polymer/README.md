@@ -16,6 +16,10 @@ Careers, etc).
                            .
     </iron-footer>
 
++ Figure out styling plan to allow styling to all elements in easy,
+uniform manner (i.e, bootstrap for polymer, easy to adapt to new
+custom elements, etc).
+
 + Implement nesting within elements for further customization. I.e,
     <my-element>
         <my-element-child-typeA>
