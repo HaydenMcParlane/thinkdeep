@@ -1,0 +1,7 @@
+{
+  "name": "thinkdeep.frontend",
+  "short_name": "thinkdeep.frontend",
+  "description": "Front end client application for the thinkdeep.tech web app.",
+  "start_url": "/",
+  "display": "standalone"
+}

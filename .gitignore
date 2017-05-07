@@ -346,3 +346,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# Personalized exclusions
+wwwroot/lib/
