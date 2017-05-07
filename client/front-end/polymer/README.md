@@ -27,5 +27,5 @@ Careers, etc).
             .
     </my-element>
 
-
++ Modify td-footer to allow text align and auto fix to bottom.
 + Use top down approach to developing website along with TDD.
