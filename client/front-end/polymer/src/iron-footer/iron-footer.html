@@ -1,0 +1,37 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../bower_components/bootswatch/journal/bootstrap.css">
+
+<dom-module id="iron-footer">
+    <template>
+        <div id="footer">                
+            <!-- TODO: 
+                implement nesting so that footer element can have encapsulate footer
+                specifics (i.e, 
+                    <iron-footer copyright="Hayden McParlane">
+                        <iron-footer-a href="Contact Us">Contact Us</iron-footer-a>
+                           .
+                           .
+                           .
+                    </iron-footer>
+                )
+            -->
+            <div class="container-fluid">
+                <nav class="nav navbar-default navbar-fixed-bottom">
+                    <h5 class="text-center text-default">&copy; 2017 Hayden McParlane</h5>
+                </nav>
+            </div>
+        </div>
+    </template>
+
+    <script type="javascript" src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        class IronFooter extends Polymer.Element{
+            static get is(){ return "iron-footer"; }
+            static get properties(){ return {}; }
+        }
+
+        window.customElements.define(IronFooter.is, IronFooter);
+    </script>
+</dom-module>
