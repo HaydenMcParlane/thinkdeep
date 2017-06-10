@@ -1,35 +1,33 @@
-#
-#   Thinkdeep.tech front-end web application
-#   Author: Hayden McParlane <hayden.mcparlane@gmail.com>
+# \<thinkdeep\>
 
-Project TODO:
-+ Look into conversion of ES6 to ES5. Polymer docs recommend
-conversions for browsers that don't fully support ES6 (i.e, ie11).
-+ Implement iron footer with nested child specifics (i.e, to allow
-a company to put loads of links in the footer such as Contact Us,
-Careers, etc).
+Front-end for thinkdeep web application.
 
-    <iron-footer copyright="Hayden McParlane">
-        <iron-footer-a href="Contact Us">Contact Us</iron-footer-a>
-                           .
-                           .
-                           .
-    </iron-footer>
+## Install the Polymer-CLI
 
-+ Figure out styling plan to allow styling to all elements in easy,
-uniform manner (i.e, bootstrap for polymer, easy to adapt to new
-custom elements, etc).
+First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
 
-+ Implement nesting within elements for further customization. I.e,
-    <my-element>
-        <my-element-child-typeA>
-        <my-element-child-typeB>
-        <my-element-child-typeA>
-            .
-            .
-            .
-            .
-    </my-element>
+## Viewing Your Application
 
-+ Modify td-footer to allow text align and auto fix to bottom.
-+ Use top down approach to developing website along with TDD.
+```
+$ polymer serve
+```
+
+## Building Your Application
+
+```
+$ polymer build
+```
+
+This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the built versions by giving `polymer serve` a folder to serve from:
+
+```
+$ polymer serve build/default
+```
+
+## Running Tests
+
+```
+$ polymer test
+```
+
+Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
