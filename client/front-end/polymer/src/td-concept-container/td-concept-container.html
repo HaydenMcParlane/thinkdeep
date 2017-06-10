@@ -9,7 +9,11 @@
       }
     </style>
 
-    <iron-container presentation="tiled">
+    <!-- TODO show-uri will configure container to display a clickable uri that allows
+         user to easily navigate through concepts similar to that on google drive -->
+    <!-- TODO Should I do this below or property on iron-container? -->
+    <iron-container-uri-path />
+    <iron-container show-uri presentation="tiled">
       <content></content>
     </iron-container>
 
@@ -27,7 +31,7 @@
     class TdConceptContainer extends Polymer.Element {
       static get is() { return 'td-concept-container'; }
       static get properties() {
-        return {          
+        return {
           }
         };
       }

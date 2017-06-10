@@ -14,8 +14,8 @@
     <td-banner />
 
     <td-concept-container>
-      <template is="dom-repeat" items="{{concepts}}" as="concept">
-        <td-concept name="{{concept.name}}"></td-concept>
+      <template is="dom-repeat" items="{{concepts}}" as="item">
+        <td-concept name="{{item.name}}" value="{{item.value}}" data="{{item.data}}"></td-concept>
       </template>
     </td-concept-container>
 
