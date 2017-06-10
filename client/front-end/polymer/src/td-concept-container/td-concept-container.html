@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../iron-container/iron-container.html">
+
+<dom-module id="td-concept-container">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <iron-container presentation="tiled">
+      <content></content>
+    </iron-container>
+
+  </template>
+
+  <script>
+    /**
+     * `td-concept-container`
+     * Thinkdeep concept container used to manage presentation of concept objects.
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class TdConceptContainer extends Polymer.Element {
+      static get is() { return 'td-concept-container'; }
+      static get properties() {
+        return {          
+          }
+        };
+      }
+    }
+
+    window.customElements.define(TdConceptContainer.is, TdConceptContainer);
+  </script>
+</dom-module>
