@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../iron-container/iron-container.html">
+<link rel="import" href="../iron-presenter/iron-presenter.html">
+<link rel="import" href="../iron-presentation-object/iron-presentation-object.html">
 
 <dom-module id="td-concept-container">
   <template>
@@ -12,10 +13,12 @@
     <!-- TODO show-uri will configure container to display a clickable uri that allows
          user to easily navigate through concepts similar to that on google drive -->
     <!-- TODO Should I do this below or property on iron-container? -->
-    <iron-container show-uri presentation="tiled">
-      <iron-container-path presentation="uri"/>
-      <content></content>
-    </iron-container>
+    <iron-presenter presentation="tiled">
+      <iron-path presentation="uri" />
+      <template is="dom-repeat" items="{{data}}" as="item">
+        <iron-presentation-object display-name="{{item.displayName}}" data="{{item}}" />
+      </template>
+    </iron-presenter>
 
   </template>
 
@@ -32,6 +35,8 @@
       static get is() { return 'td-concept-container'; }
       static get properties() {
         return {
+          data: {
+            type: Object
           }
         };
       }

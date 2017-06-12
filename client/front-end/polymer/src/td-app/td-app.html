@@ -13,11 +13,7 @@
 
     <td-banner />
 
-    <td-concept-container>
-      <template is="dom-repeat" items="{{concepts}}" as="item">
-        <td-concept name="{{item.name}}" value="{{item.value}}" data="{{item.data}}"></td-concept>
-      </template>
-    </td-concept-container>
+    <td-concept-container data={{concepts}}></td-concept-container>
 
     <td-footer>
     </td-footer>
@@ -36,10 +32,10 @@
           concepts: {
             type: Array,
             value: () => {
-              return {
-                "case-study" : [],
-                "topics" : []
-              }
+              return [
+                { "displayName" : "Case Study" },
+                { "displayName" : "Topics" }
+              ];
             })
           }
         };
